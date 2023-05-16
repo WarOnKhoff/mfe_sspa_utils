@@ -30,7 +30,7 @@ export const useGlobalStore = createStore((set) => ({
 		}),
 	fetchWeatherData: async (cityName) => {
 		const response = await fetch(
-			`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=no&alerts=no`
+			`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${cityName}&days=5&aqi=no&alerts=no`
 		)
 		return await response.json()
 	}
